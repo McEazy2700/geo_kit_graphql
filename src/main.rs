@@ -30,6 +30,7 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(move || {
         App::new()
+            .wrap(actix_cors::Cors::permissive())
             .app_data(Data::new(build_schema()))
             .service(hello)
             .service(playground)
