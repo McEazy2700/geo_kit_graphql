@@ -10,5 +10,6 @@ actix-cors = "0.6.4"
 actix-web = "4.4.0"
 async-graphql = "6.0.6"
 async-graphql-actix-web = "6.0.6"
+dotenv = "0.15.0"
 sea-orm = { version = "0.12.2", features = ["sqlx-postgres", "runtime-tokio-rustls", "with-chrono", "macros", "with-uuid", "debug-print"] }
 serde = { version = "1.0.188", features = ["derive"] }
