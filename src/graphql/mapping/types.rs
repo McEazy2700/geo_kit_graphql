@@ -8,6 +8,7 @@ pub struct RawCoordinate {
 
 #[derive(SimpleObject)]
 pub struct Coordinate {
+    pub id: i32,
     pub lat_str: String,
     pub lon_str: String,
     pub lat: f32,
@@ -15,8 +16,9 @@ pub struct Coordinate {
 }
 
 impl Coordinate {
-    pub fn new(lat: f32, lon: f32, lat_str: String, lon_str: String) -> Self {
+    pub fn new(id: i32, lat: f32, lon: f32, lat_str: String, lon_str: String) -> Self {
         Self {
+            id,
             lat_str,
             lon_str,
             lon,
