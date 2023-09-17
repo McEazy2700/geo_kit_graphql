@@ -4,7 +4,7 @@ use super::types::{Coordinate, RawCoordinate};
 
 pub fn parse_coordinates(coordinates: Vec<RawCoordinate>) -> Result<Vec<Coordinate>, Error> {
     let mut parsed: Vec<Coordinate> = vec![];
-    let mut id = 0;
+    let mut id = 1;
     for coord in coordinates {
         let lon_vals = parse_str_coordinate(coord.lon, CoordType::Longitude)?;
         let lat_vals = parse_str_coordinate(coord.lat, CoordType::Latitude)?;
